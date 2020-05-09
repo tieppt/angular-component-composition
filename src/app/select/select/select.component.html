@@ -1,0 +1,13 @@
+<nz-select
+  class="pt-select"
+  nzAllowClear
+  [nzPlaceHolder]="placeHolder"
+  [nzMode]="selectMode"
+  [formControl]="control"
+>
+  <nz-option
+    *ngFor="let option of options$ | async"
+    [nzLabel]="option.label"
+    [nzValue]="option.key"
+  ></nz-option>
+</nz-select>
